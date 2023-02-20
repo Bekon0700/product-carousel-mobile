@@ -2,14 +2,12 @@ const img = document.getElementById('yt-thumbnail')
 const crossBtn = document.getElementById('cross-btn')
 const video = document.getElementById('video')
 
-img.addEventListener('click', () => {
-    video.classList.add('active')
+$('#yt-thumbnail').on('click', () => {
+    $('#video').addClass('active')
     $('.carousel_container').addClass('d-none')
-    const p = $('iframe').attr('src')
-    console.log(p);
 })
 
-crossBtn.addEventListener('click', () => {
-    video.classList.remove('active')
+$('#cross-btn').on('click', () => {
+    $('#video').removeClass('active')
     $('.carousel_container').removeClass('d-none')
 })

@@ -99,9 +99,8 @@ body {
         position: fixed;
         width: 100%;
         scale: 0;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        bottom: 50%;
+        transform: translateY(50%);
         transition: all 0.5s ease-in-out;
 
         iframe {
@@ -138,4 +137,30 @@ body {
 
 .d-none {
     display: none;
+}
+
+
+.image-overlay {
+    position: fixed;
+    pointer-events: none;
+    background: rgba(0, 0, 0, 0.6);
+    inset: 0;
+    opacity: 0;
+    &.active {
+        pointer-events: auto;
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.popSwiper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    height: 70%;
+}
+
+.dragColor{
+    background-color: #fff;
 }
