@@ -13,8 +13,13 @@ const swiper = new Swiper(".mySwiper", {
 
 const swiperPop = new Swiper(".popSwiper", {
   zoom: true,
+  // freeMode: true,
+  // watchSlidesProgress: true,
   scrollbar: {
     el: '.swiper-scrollbar',
-    horizontalClass: '.dragColor'
+    horizontalClass: 'dragColor'
+  },
+  thumbs: {
+    swiper: swiper
   }
 });
