@@ -3,6 +3,7 @@ const crossBtn = document.getElementById('cross-btn')
 const video = document.getElementById('video')
 
 $('#yt-thumbnail').on('click', () => {
+    console.log(541)
     $('#video').addClass('active')
     $('.carousel_container').addClass('d-none')
 })
