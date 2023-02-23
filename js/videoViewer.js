@@ -1,14 +1,14 @@
-const img = document.getElementById('yt-thumbnail')
-const crossBtn = document.getElementById('cross-btn')
-const video = document.getElementById('video')
+$(".yt-vid").on("click", (e) => {
+  const videoId = $(e.target).data("vid-id");
+  console.log($(e.target));
+  $("#video").addClass("active");
+  $("body").addClass("overflow-hidden");
+  $(".carousel_container").addClass("z-neg");
+  $(".video-yt").attr("src", `${$(".video-yt").data("src")}${videoId}`);
+});
 
-$('#yt-thumbnail').on('click', () => {
-    console.log(541)
-    $('#video').addClass('active')
-    $('.carousel_container').addClass('d-none')
-})
-
-$('#cross-btn').on('click', () => {
-    $('#video').removeClass('active')
-    $('.carousel_container').removeClass('d-none')
-})
+$("#cross-btn").on("click", () => {
+  $("#video").removeClass("active");
+  $(".carousel_container").removeClass("z-neg");
+  $(".video-yt").attr("src", "");
+});
